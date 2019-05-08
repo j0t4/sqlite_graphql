@@ -22,3 +22,26 @@ por ejemplo:
     query{
         albums(limit: 5){albumId,title,artist{name}, tracks(limit:3){name,genre {name} }}
     }
+
+Añadir un artista:
+
+    mutation{
+        createArtist (name: "New Artist") {name}
+    }
+
+
+Modificar el nombre de un artista:
+
+    mutation{
+        updateArtist (artistId: 276, name: "Edited New Artist") {name}
+    }
+
+
+Eliminar un artista:
+    
+    mutation{
+        deleteArtist (artistId: 276) {
+        success
+        }
+    }
+
