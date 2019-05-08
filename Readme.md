@@ -24,23 +24,31 @@ por ejemplo:
     }
 
 o 
-  
-  query{ customers(limit:10){
-  lastName
-  firstName
-  invoices{
-    billingAddress
-    billingCity
-    billingState
-    billingCountry
-    billingPostalCode
-    invoiceItems{track{name,mediaType {
-      name
-    },genre {
-      name
-    }}
-    }}
-  }}
+
+    query{
+      customers(limit: 10) {
+        lastName
+        firstName
+        invoices {
+          billingAddress
+          billingCity
+          billingState
+          billingCountry
+          billingPostalCode
+          invoiceItems {
+            track {
+              name
+              mediaType {
+                name
+              }
+              genre {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
 
 Añadir un artista:
 
