@@ -23,6 +23,25 @@ por ejemplo:
         albums(limit: 5){albumId,title,artist{name}, tracks(limit:3){name,genre {name} }}
     }
 
+o 
+  
+  query{ customers(limit:10){
+  lastName
+  firstName
+  invoices{
+    billingAddress
+    billingCity
+    billingState
+    billingCountry
+    billingPostalCode
+    invoiceItems{track{name,mediaType {
+      name
+    },genre {
+      name
+    }}
+    }}
+  }}
+
 Añadir un artista:
 
     mutation{
