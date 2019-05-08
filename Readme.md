@@ -1,4 +1,4 @@
-# SQLite GRAPHQL conector 
+# SQLite GraphQL conector 
 
 Antes de empezar...
 ```shell
